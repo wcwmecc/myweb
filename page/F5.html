@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>图片滚动</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<style>
+         body,html{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+		*{padding: 0;margin: 0;}
+		.out{
+            position: absolute;
+            top: 0;
+			width: 1200px;
+			height: 250px;
+			margin: 20px auto;
+			overflow: hidden;
+			text-align: center;
+		}
+		.con{
+			width: 3300px;
+			height: 250px;
+			overflow: hidden;
+			animation: move 8s linear infinite normal;
+			animation-fill-mode:forwards;
+		}
+		.con:hover{
+			animation-play-state:paused;
+			-webkit-animation-play-state:paused;
+		}
+		@keyframes move{
+			0%{transform:translateX(0px);}
+			100%{transform:translateX(-2000px);}
+		}
+
+		.con li{
+			float: left;
+			list-style: none;
+			overflow: hidden;
+		}
+		.con img{
+			float: left;
+			width: 400px;
+			height: 250px;
+		}
+		.pause{
+			position: relative;
+			height: 60px;
+			display: inline-block;
+			margin: 20px auto;
+			text-align: center;
+		}
+		.pause:before{
+			position: absolute;
+			content: "Pause";
+			display: inline-block;
+			width: 100px;
+			height: 60px;
+			left: 0px;
+			line-height: 60px;
+			font-size: 20px;
+			color: #fff;
+			margin: 0 20px;
+			background: #6293d3;
+			border: none;
+			border-radius: 20px;
+			outline: none;
+		}
+		.out input{
+			display: none;
+		}
+		.out input:checked ~ .con{
+			animation-play-state:paused;
+			-webkit-animation-play-state:paused;
+		}
+		.out input:checked ~ .pause:before{
+			content: "Start";
+		}
+
+        .out1{
+            position: absolute;
+            bottom:  0;
+			width: 1200px;
+			height: 300px;
+			margin: 20px auto;
+			overflow: hidden;
+			text-align: center;
+		}
+		.con1{
+			width: 3300px;
+			height: 300px;
+			overflow: hidden;
+			animation: movec 8s linear infinite normal;
+			animation-fill-mode:forwards;
+		}
+		.con1:hover{
+			animation-play-state:paused;
+			-webkit-animation-play-state:paused;
+		}
+		@keyframes movec{
+			0%{transform:translateX(0px);}
+			100%{transform:translateX(-1800px);}
+		}
+
+		.con1 li{
+			float: left;
+			list-style: none;
+			overflow: hidden;
+		}
+		.con1 img{
+			float: left;
+			width: 300px;
+			height: 300px;
+		}
+		.pause{
+			position: relative;
+			height: 60px;
+			display: inline-block;
+			margin: 20px auto;
+			text-align: center;
+		}
+		.pause:before{
+			position: absolute;
+			content: "Pause";
+			display: inline-block;
+			width: 100px;
+			height: 60px;
+			left: 0px;
+			line-height: 60px;
+			font-size: 20px;
+			color: #fff;
+			margin: 0 20px;
+			background: #6293d3;
+			border: none;
+			border-radius: 20px;
+			outline: none;
+		}
+		.out1 input{
+			display: none;
+		}
+		.out1 input:checked ~ .con{
+			animation-play-state:paused;
+			-webkit-animation-play-state:paused;
+		}
+		.out1 input:checked ~ .pause:before{
+			content: "Start";
+		}
+
+
+
+
+
+
+        .video_css{
+            width: 100%;
+            height: 100%;
+        }
+        .video{
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+            vertical-align: bottom;
+        }
+	</style>
+</head>
+<body>
+    <div class="video_css">
+        <img src="../static/img/bg.JPG" class="video">
+    </div>
+	<div class="out">
+		<ul class="con">
+			<li><img src="../static/img/b (1).JPG" alt=""></li>
+			<li><img src="../static/img/b (2).JPG" alt=""></li>
+			<li><img src="../static/img/b (3).JPG" alt=""></li>
+			<li><img src="../static/img/b (4).JPG" alt=""></li>
+			<li><img src="../static/img/b (5).JPG" alt=""></li>
+			
+			<li><img src="../static/img/b (1).JPG" alt=""></li>
+			<li><img src="../static/img/b (2).JPG" alt=""></li>
+			<li><img src="../static/img/b (3).JPG" alt=""></li>
+		</ul> 
+	</div>
+
+    <div class="out1">
+		<ul class="con1">
+            <li><img src="../static/img/a (1).JPG" alt=""></li>
+            <li><img src="../static/img/a (2).JPG" alt=""></li>
+            <li><img src="../static/img/a (3).JPG" alt=""></li>
+            <li><img src="../static/img/a (4).JPG" alt=""></li>
+            <li><img src="../static/img/a (5).JPG" alt=""></li>
+            <li><img src="../static/img/a (6).JPG" alt=""></li>
+            
+            <li><img src="../static/img/a (1).JPG" alt=""></li>
+            <li><img src="../static/img/a (2).JPG" alt=""></li>
+            <li><img src="../static/img/a (3).JPG" alt=""></li>
+            <li><img src="../static/img/a (4).JPG" alt=""></li>
+		</ul>
+	</div>
+
+
+ 
+</body>
+</html>

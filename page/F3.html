@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            perspective: 2000px;
+            background: linear-gradient(to top  right,#2B3346,#5C8F93, #365780, #3B4761);
+        }
+        body{
+            margin-top: 60px;
+        }
+
+        img {
+            width: 250px;
+            height: 150px;
+        }
+        
+        section {
+            position: relative;
+            left: 40%;
+            /* top: 40%; */
+            /* transform: translate(-50%,-50%); */
+            /* transform: translateX(-50%); */
+            width: 200px;
+            height: 100px;
+            /* margin: 100px auto; */
+            padding: 50px 0;
+            transform-style: preserve-3d;
+            animation: rorate 20s linear infinite;
+        }
+        section:hover {
+            animation-play-state: paused;
+        }
+        @keyframes rorate {
+            0% {
+                transform: rotateY(0);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+        
+        
+        .first div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+
+        }
+        .first div:nth-child(1){
+        transform: translateZ(300px);
+        }
+        .first div:nth-child(2){
+        transform: rotateY(60deg) translateZ(300px);
+        }
+        .first div:nth-child(3){
+        transform: rotateY(120deg) translateZ(300px);
+        }
+        .first div:nth-child(4){
+        transform: rotateY(180deg) translateZ(300px);
+        }
+        .first div:nth-child(5){
+        transform: rotateY(240deg) translateZ(300px);
+        }
+        .first div:nth-child(6){
+        transform: rotateY(300deg) translateZ(300px);
+        }
+
+        /* .second{
+            padding: 100px 0;
+        } */
+
+        .second div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+
+        }
+        .second div:nth-child(1){
+        transform: translateZ(300px);
+        }
+        .second div:nth-child(2){
+        transform: rotateY(60deg) translateZ(300px);
+        }
+        .second div:nth-child(3){
+        transform: rotateY(120deg) translateZ(300px);
+        }
+        .second div:nth-child(4){
+        transform: rotateY(180deg) translateZ(300px);
+        }
+        .second div:nth-child(5){
+        transform: rotateY(240deg) translateZ(300px);
+        }
+        .second div:nth-child(6){
+        transform: rotateY(300deg) translateZ(300px);
+        }
+
+        .third div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200px;
+
+        }
+        .third div:nth-child(1){
+        transform: translateZ(300px);
+        }
+        .third div:nth-child(2){
+        transform: rotateY(60deg) translateZ(300px);
+        }
+        .third div:nth-child(3){
+        transform: rotateY(120deg) translateZ(300px);
+        }
+        .third div:nth-child(4){
+        transform: rotateY(180deg) translateZ(300px);
+        }
+        .third div:nth-child(5){
+        transform: rotateY(240deg) translateZ(300px);
+        }
+        .third div:nth-child(6){
+        transform: rotateY(300deg) translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+<section class="first">
+    <div><img src="../static/image/1 (1).JPG"></div>
+    <div><img src="../static/image/1 (2).JPG"></div>
+    <div><img src="../static/image/1 (3).JPG"></div>
+    <div><img src="../static/image/1 (4).JPG"></div>
+    <div><img src="../static/image/1 (5).JPG"></div>
+    <div><img src="../static/image/1 (6).JPG"></div>
+    <div><img src="../static/image/1 (7).JPG"></div>
+</section>
+<section class="second">
+    <div><img src="../static/image/1 (8).JPG"></div>
+    <div><img src="../static/image/1 (9).JPG"></div>
+    <div><img src="../static/image/1 (10).JPG"></div>
+    <div><img src="../static/image/1 (11).JPG"></div>
+    <div><img src="../static/image/1 (12).JPG"></div>
+    <div><img src="../static/image/1 (13).JPG"></div>
+    <div><img src="../static/image/1 (14).JPG"></div>
+</section>
+
+<section class="third">
+    <div><img src="../static/image/1 (15).JPG"></div>
+    <div><img src="../static/image/1 (16).JPG"></div>
+    <div><img src="../static/image/1 (17).JPG"></div>
+    <div><img src="../static/image/1 (18).JPG"></div>
+    <div><img src="../static/image/1 (19).JPG"></div>
+    <div><img src="../static/image/1 (20).JPG"></div>
+    <div><img src="../static/image/1 (21).JPG"></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../layui/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <title>look</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .video_css{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .video{
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+            vertical-align: bottom;
+        }
+       .myform{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          margin-left: -30px;
+          background-color: transparent;
+      
+       }
+       .label{
+          color: #fff;
+       }
+       .layui-form-item .layui-input-inline{
+          text-align: center;
+       }
+       .layui-input{
+        opacity: 0.7;
+       }
+       .layui-btn{
+        background-color: #014373;
+        opacity: 0.7
+       }
+       .layui-form-label{
+        width: 100px;
+       }
+       
+    </style>
+</head>
+<body>
+<div class="video_css">
+  <video src="../static/v5.mp4"   class="video" autoplay loop muted></video>
+  <form class="layui-form myform">
+  <div class="layui-form-item">
+    <label class="layui-form-label label">说，你是谁？</label>
+    <div class="layui-input-inline">
+      <input type="text" id="name"   placeholder="请输入" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label label">说，我又是谁？</label>
+    <div class="layui-input-inline">
+      <input type="text" id="pwd"   placeholder="请输入" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label label"></label>
+    <div class="layui-input-inline">
+      <div class="layui-btn"  id="login">登 录</div>
+    </div>
+    
+  </div>
+  </form>
+  <script type="text/javascript" src="../layui/layui.js"></script>
+  <script>
+  //Demo
+  layui.use('form', function(){
+  var form = layui.form;
+  $('#login').click(function(){
+    let name = $('#name').val()
+    let pwd = $('#pwd').val()
+    if(!name){
+      layer.msg('你没说你自己是谁哦！');
+    }else if(!pwd){
+      layer.msg('你没说我自己是谁哦！');
+    }else{
+      if(name != '张傻子'){
+        layer.msg('你也自己是谁也不知道呀！');    
+      }else if(pwd != '全世界最可爱的周航'){
+        layer.msg('你竟然不知道我是谁，可恶！'); 
+      }else{
+        layer.msg('嘿嘿嘿！进去看看吧',{time:1000}); 
+        setTimeout(() =>{
+          window.location.href = '../index.html'
+        },1000)
+        window.sessionStorage.setItem('code','hehe')
+      }
+    }
+  })
+
+  //提交
+
+  });
+  </script>      
+</div>
+</body>
+</html>

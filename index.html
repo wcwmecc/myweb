@@ -5,7 +5,7 @@
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>HHH</title>
+	<title>一起看！</title>
 	<link rel="stylesheet" href="./layui/css/layui.css">
 	<link rel="stylesheet" href="./static/css/style.css">
 	<script type="text/javascript" src="./layui/lay/modules/jquery.min.js"></script>
@@ -62,7 +62,7 @@
 			<!-- 顶部右侧添加选项卡监听 -->
 			<ul class="layui-nav my-header-user-nav" lay-filter="side-top-right">
 				<audio src="./static/music.mp3"  loop autoplay id="audio" ></audio>
-				<button type="button" class="layui-btn layui-btn-warm" id="btn">听会音乐呗</button>
+				<button type="button" class="layui-btn layui-btn-warm" id="btn">暂停会，等下再听</button>
 			</ul>
 
 		</div>
@@ -111,7 +111,20 @@
 			console.log(code);
 			if(!code){
 				window.location.href = './page/login.html'
+			}else{
+			// 	var audio = document.getElementById('audio');
+			// 	if(audio!== null){             
+            //     if(audio.paused){
+			// 		$('#btn').text('听会音乐呗')
+            //     }else{
+			// 		$('#btn').text('暂停会，等下再听')
+            //     }
+            //   }
 			}
+			console.log('嘿嘿嘿');
+
+		
+			
 		}
 		var stop = true
 		$('#btn').click(function(){
